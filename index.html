@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Georgia Burr - UGC Creator & Travel Storyteller</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Georgia Burr</div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">What I Can Do for You</a>
+                <a href="#portfolio" class="nav-link">See the Story</a>
+                <a href="#about" class="nav-link">The Girl Behind the Lens</a>
+                <a href="#testimonials" class="nav-link">From People I've Worked With</a>
+                <a href="#contact" class="nav-link">Let's Create Something</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="profile-image">
+                    <img src="https://via.placeholder.com/200x200/f5f5dc/8b7355?text=Georgia" alt="Georgia Burr" class="profile-img">
+                </div>
+                <h1 class="hero-title">Georgia Burr</h1>
+                <h2 class="hero-subtitle">UGC Creator & Travel Storyteller</h2>
+                <p class="hero-tagline">Content that connects.</p>
+                <p class="hero-subtagline">Wherever I go, connection goes with me — and so can your brand.</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com/georgia.goes.global" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://tiktok.com/@georgiagoesglobal" target="_blank" class="social-link">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+                <div class="contact-bar">
+                    <input type="email" placeholder="georgia.burr@icloud.com" class="email-input" readonly>
+                    <button class="email-btn" onclick="window.location.href='mailto:georgia.burr@icloud.com'">Email Me</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/400x500/f5f5dc/8b7355?text=About+Georgia" alt="Georgia Burr" class="about-img">
+                </div>
+                <div class="about-text">
+                    <h2 class="section-title">The Girl Behind the Lens</h2>
+                    <p>Hey there! I'm Georgia, a passionate UGC creator and travel storyteller who believes in the power of authentic connection. Through my lens, I capture not just moments, but emotions that resonate with audiences worldwide.</p>
+                    <p>With a keen eye for aesthetic detail and a natural storytelling ability, I help brands create content that doesn't just look beautiful—it feels genuine and connects with real people in meaningful ways.</p>
+                    <p>Whether I'm exploring hidden gems in bustling cities or showcasing the perfect hotel stay, my content always focuses on creating that authentic connection between your brand and your audience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">What I Can Do for You</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <h3>Hotels & Airbnbs</h3>
+                    <p>Showcase your property with authentic, engaging content that highlights the experience.</p>
+                    <button class="service-btn" onclick="scrollToSection('portfolio')">View Portfolio</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Vlog-style / Voiceovers</h3>
+                    <p>Dynamic storytelling that brings your brand to life through personal narratives.</p>
+                    <button class="service-btn" onclick="scrollToSection('portfolio')">View Portfolio</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Aesthetic Edits</h3>
+                    <p>Beautifully crafted content that maintains your brand's visual identity.</p>
+                    <button class="service-btn" onclick="scrollToSection('portfolio')">View Portfolio</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">See the Story</h2>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="hotels">Hotels & Airbnbs</button>
+                <button class="filter-btn" data-filter="vlogs">Vlog-style</button>
+                <button class="filter-btn" data-filter="aesthetic">Aesthetic Edits</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="hotels">
+                    <div class="portfolio-thumbnail">
+                        <img src="https://via.placeholder.com/300x200/f5f5dc/8b7355?text=Hotel+Content" alt="Hotel Content">
+                        <div class="portfolio-overlay">
+                            <button class="play-btn" onclick="openLightbox('video1')"><i class="fas fa-play"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="vlogs">
+                    <div class="portfolio-thumbnail">
+                        <img src="https://via.placeholder.com/300x200/f5f5dc/8b7355?text=Vlog+Content" alt="Vlog Content">
+                        <div class="portfolio-overlay">
+                            <button class="play-btn" onclick="openLightbox('video2')"><i class="fas fa-play"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="aesthetic">
+                    <div class="portfolio-thumbnail">
+                        <img src="https://via.placeholder.com/300x200/f5f5dc/8b7355?text=Aesthetic+Content" alt="Aesthetic Content">
+                        <div class="portfolio-overlay">
+                            <button class="play-btn" onclick="openLightbox('video3')"><i class="fas fa-play"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="hotels">
+                    <div class="portfolio-thumbnail">
+                        <img src="https://via.placeholder.com/300x200/f5f5dc/8b7355?text=Airbnb+Content" alt="Airbnb Content">
+                        <div class="portfolio-overlay">
+                            <button class="play-btn" onclick="openLightbox('video4')"><i class="fas fa-play"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="vlogs">
+                    <div class="portfolio-thumbnail">
+                        <img src="https://via.placeholder.com/300x200/f5f5dc/8b7355?text=Travel+Vlog" alt="Travel Vlog">
+                        <div class="portfolio-overlay">
+                            <button class="play-btn" onclick="openLightbox('video5')"><i class="fas fa-play"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="aesthetic">
+                    <div class="portfolio-thumbnail">
+                        <img src="https://via.placeholder.com/300x200/f5f5dc/8b7355?text=Brand+Content" alt="Brand Content">
+                        <div class="portfolio-overlay">
+                            <button class="play-btn" onclick="openLightbox('video6')"><i class="fas fa-play"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">From People I've Worked With</h2>
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Georgia's content perfectly captured the essence of our brand. Her authentic storytelling approach resulted in incredible engagement rates."</p>
+                        <div class="testimonial-author">
+                            <strong>— Brand Partner</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Working with Georgia was seamless. She understood our vision immediately and delivered content that exceeded our expectations."</p>
+                        <div class="testimonial-author">
+                            <strong>— Hotel Manager</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Georgia's eye for aesthetic detail and storytelling ability made our property look absolutely stunning. Highly recommend!"</p>
+                        <div class="testimonial-author">
+                            <strong>— Airbnb Host</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Create Something</h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Tell me about your project..." rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Get in Touch</h3>
+                        <p>Ready to create content that connects? Let's chat about your next project.</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Email</h4>
+                        <a href="mailto:georgia.burr@icloud.com">georgia.burr@icloud.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Follow Me</h4>
+                        <div class="contact-social">
+                            <a href="https://instagram.com/georgia.goes.global" target="_blank">Instagram @georgia.goes.global</a>
+                            <a href="https://tiktok.com/@georgiagoesglobal" target="_blank">TikTok @georgiagoesglobal</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Georgia Burr. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://instagram.com/georgia.goes.global" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://tiktok.com/@georgiagoesglobal" target="_blank"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <div id="lightbox-video"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

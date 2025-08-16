@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
     <!-- Navigation -->
@@ -345,6 +346,126 @@
         </div>
     </section>
 
+    <!-- Travel Map Section -->
+    <section id="travel-map" class="travel-map">
+        <div class="map-container">
+            <div class="map-header">
+                <h2 class="map-title">Where I've Created Content</h2>
+                <p class="map-subtitle">Explore the destinations where I've captured stories and created authentic content</p>
+            </div>
+            <div class="map-content">
+                <div class="map-left">
+                    <div id="map" class="interactive-map"></div>
+                </div>
+                <div class="map-right">
+                    <div class="countries-list">
+                        <h3 class="countries-title">Content Creation Locations</h3>
+                        <div class="countries-grid">
+                            <div class="country-item" data-coords="[54.7023545, -3.2765753]">
+                                <div class="country-pin"></div>
+                                <div class="country-info">
+                                    <h4>United Kingdom</h4>
+                                    <p>Home base and content creation hub</p>
+                                </div>
+                            </div>
+                            <div class="country-item" data-coords="[56.7861112, -4.1140516]">
+                                <div class="country-pin"></div>
+                                <div class="country-info">
+                                    <h4>Scotland</h4>
+                                    <p>Stunning landscapes and cultural content</p>
+                                </div>
+                            </div>
+                            <div class="country-item" data-coords="[13.7563309, 100.5017651]">
+                                <div class="country-pin"></div>
+                                <div class="country-info">
+                                    <h4>Thailand</h4>
+                                    <p>Vibrant street life and cultural experiences</p>
+                                </div>
+                            </div>
+                            <div class="country-item" data-coords="[16.0544068, 107.8337663]">
+                                <div class="country-pin"></div>
+                                <div class="country-info">
+                                    <h4>Vietnam</h4>
+                                    <p>Rich culture and breathtaking scenery</p>
+                                </div>
+                            </div>
+                            <div class="country-item" data-coords="[35.6828387, 139.7594549]">
+                                <div class="country-pin"></div>
+                                <div class="country-info">
+                                    <h4>Japan</h4>
+                                    <p>Modern culture meets traditional beauty</p>
+                                </div>
+                            </div>
+                            <div class="country-item" data-coords="[-8.4095178, 115.188916]">
+                                <div class="country-pin"></div>
+                                <div class="country-info">
+                                    <h4>Bali, Indonesia</h4>
+                                    <p>Tropical paradise and spiritual retreats</p>
+                                </div>
+                            </div>
+                            <div class="country-item" data-coords="[12.7503486, 122.7312101]">
+                                <div class="country-pin"></div>
+                                <div class="country-info">
+                                    <h4>Philippines</h4>
+                                    <p>Island adventures and pristine beaches</p>
+                                </div>
+                            </div>
+                            <div class="country-item" data-coords="[18.1239696, 103.8160051]">
+                                <div class="country-pin"></div>
+                                <div class="country-info">
+                                    <h4>Laos</h4>
+                                    <p>Serene landscapes and authentic experiences</p>
+                                </div>
+                            </div>
+                            <div class="country-item" data-coords="[11.5564372, 104.9282099]">
+                                <div class="country-pin"></div>
+                                <div class="country-info">
+                                    <h4>Cambodia</h4>
+                                    <p>Ancient temples and cultural heritage</p>
+                                </div>
+                            </div>
+                            <div class="country-item" data-coords="[4.5693754, 102.2656823]">
+                                <div class="country-pin"></div>
+                                <div class="country-info">
+                                    <h4>Malaysia</h4>
+                                    <p>Diverse culture and urban exploration</p>
+                                </div>
+                            </div>
+                            <div class="country-item" data-coords="[7.5554942, 80.7137847]">
+                                <div class="country-pin"></div>
+                                <div class="country-info">
+                                    <h4>Sri Lanka</h4>
+                                    <p>Tea plantations and coastal beauty</p>
+                                </div>
+                            </div>
+                            <div class="country-item" data-coords="[38.9597594, 34.9249653]">
+                                <div class="country-pin"></div>
+                                <div class="country-info">
+                                    <h4>Turkey</h4>
+                                    <p>Where Europe meets Asia - rich history</p>
+                                </div>
+                            </div>
+                            <div class="country-item" data-coords="[1.357107, 103.8194992]">
+                                <div class="country-pin"></div>
+                                <div class="country-info">
+                                    <h4>Singapore</h4>
+                                    <p>Modern city-state and culinary adventures</p>
+                                </div>
+                            </div>
+                            <div class="country-item" data-coords="[38.9953683, 21.9877132]">
+                                <div class="country-pin"></div>
+                                <div class="country-info">
+                                    <h4>Greece</h4>
+                                    <p>Ancient history and Mediterranean charm</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials">
         <div class="container">
@@ -439,6 +560,7 @@
         </div>
     </div>
 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

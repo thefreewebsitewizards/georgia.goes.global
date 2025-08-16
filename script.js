@@ -136,3 +136,113 @@ document.querySelectorAll('section').forEach(section => {
 
 // Remove the dynamic style injection section (lines 132-165)
 // The mobile navigation styles are now in the CSS file
+
+
+// Travel Map Implementation
+function initializeMap() {
+    // Initialize the map
+    const map = L.map('map', {
+        center: [20, 0], // Center on world view
+        zoom: 2,
+        zoomControl: true,
+        scrollWheelZoom: true,
+        doubleClickZoom: true,
+        dragging: true
+    });
+
+    // Add tile layer (OpenStreetMap)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors',
+        maxZoom: 18,
+        tileSize: 256,
+        zoomOffset: 0
+    }).addTo(map);
+
+    // Location data with coordinates
+    const locations = [
+        { name: 'United Kingdom', coords: [54.7023545, -3.2765753], description: 'Home base and content creation hub' },
+        { name: 'Scotland', coords: [56.7861112, -4.1140516], description: 'Stunning landscapes and cultural content' },
+        { name: 'Thailand', coords: [13.7563309, 100.5017651], description: 'Vibrant street life and cultural experiences' },
+        { name: 'Vietnam', coords: [16.0544068, 107.8337663], description: 'Rich culture and breathtaking scenery' },
+        { name: 'Japan', coords: [35.6828387, 139.7594549], description: 'Modern culture meets traditional beauty' },
+        { name: 'Bali, Indonesia', coords: [-8.4095178, 115.188916], description: 'Tropical paradise and spiritual retreats' },
+        { name: 'Philippines', coords: [12.7503486, 122.7312101], description: 'Island adventures and pristine beaches' },
+        { name: 'Laos', coords: [18.1239696, 103.8160051], description: 'Serene landscapes and authentic experiences' },
+        { name: 'Cambodia', coords: [11.5564372, 104.9282099], description: 'Ancient temples and cultural heritage' },
+        { name: 'Malaysia', coords: [4.5693754, 102.2656823], description: 'Diverse culture and urban exploration' },
+        { name: 'Sri Lanka', coords: [7.5554942, 80.7137847], description: 'Tea plantations and coastal beauty' },
+        { name: 'Turkey', coords: [38.9597594, 34.9249653], description: 'Where Europe meets Asia - rich history' },
+        { name: 'Singapore', coords: [1.357107, 103.8194992], description: 'Modern city-state and culinary adventures' },
+        { name: 'Greece', coords: [38.9953683, 21.9877132], description: 'Ancient history and Mediterranean charm' }
+    ];
+
+    // Custom icon for pins
+    const customIcon = L.divIcon({
+        className: 'custom-pin',
+        html: '<div style="background-color: #d4a574; width: 20px; height: 20px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 8px rgba(212, 165, 116, 0.6);"></div>',
+        iconSize: [20, 20],
+        iconAnchor: [10, 10]
+    });
+
+    // Store markers for interaction
+    const markers = {};
+
+    // Add markers for each location
+    locations.forEach((location, index) => {
+        const marker = L.marker(location.coords, { icon: customIcon }).addTo(map);
+        
+        // Create popup content
+        const popupContent = `
+            <div class="custom-popup">
+                <div class="popup-title">${location.name}</div>
+                <div class="popup-description">${location.description}</div>
+            </div>
+        `;
+        
+        marker.bindPopup(popupContent, {
+            maxWidth: 250,
+            className: 'custom-popup'
+        });
+        
+        // Store marker reference
+        markers[location.name] = marker;
+    });
+
+    // Add click interaction for country list items
+    document.querySelectorAll('.country-item').forEach(item => {
+        item.addEventListener('click', function() {
+            // Remove active class from all items
+            document.querySelectorAll('.country-item').forEach(el => el.classList.remove('active'));
+            // Add active class to clicked item
+            this.classList.add('active');
+            
+            // Get coordinates and zoom to location
+            const coords = JSON.parse(this.dataset.coords);
+            const countryName = this.querySelector('h4').textContent;
+            
+            // Pan and zoom to the location
+            map.setView(coords, 6, { animate: true, duration: 1 });
+            
+            // Open popup for the corresponding marker
+            if (markers[countryName]) {
+                setTimeout(() => {
+                    markers[countryName].openPopup();
+                }, 500);
+            }
+        });
+    });
+
+    // Fit map to show all markers initially
+    const group = new L.featureGroup(locations.map(loc => L.marker(loc.coords)));
+    map.fitBounds(group.getBounds().pad(0.1));
+
+    return map;
+}
+
+// Initialize map when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if map container exists
+    if (document.getElementById('map')) {
+        initializeMap();
+    }
+});

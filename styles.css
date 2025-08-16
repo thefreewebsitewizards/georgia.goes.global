@@ -752,3 +752,34 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
+## Solution 2: Check your video file
+
+The issue might be with the video file itself. Try these steps:
+
+1. **Test the video directly**: Open `http://127.0.0.1:5500/video/Beauty_Fashion/a.mp4` in your browser
+2. **Check video properties**: Right-click the file → Properties to see if it has valid dimensions
+3. **Re-encode the video**: Use a tool like HandBrake with these settings:
+   - Format: MP4
+   - Video Codec: H.264
+   - Audio Codec: AAC
+   - Container: MP4
+
+## Solution 3: Add CSS to ensure video visibility
+
+Add this to your CSS to make sure the video is visible:
+```css
+.lightbox video {
+    background-color: #000;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-height: 200px;
+}
+
+.lightbox-content {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+}
+```

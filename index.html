@@ -112,59 +112,74 @@
             <h2 class="section-title">See the Story</h2>
             <div class="portfolio-filters">
                 <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="hotels">Hotels & Airbnbs</button>
-                <button class="filter-btn" data-filter="vlogs">Vlog-style</button>
-                <button class="filter-btn" data-filter="aesthetic">Aesthetic Edits</button>
+                <button class="filter-btn" data-filter="beauty-fashion">Beauty & Fashion</button>
+                <button class="filter-btn" data-filter="hotel-airbnb">Hotel & Airbnb</button>
+                <button class="filter-btn" data-filter="places-experiences">Places & Experiences</button>
+                <button class="filter-btn" data-filter="restaurants-cafes">Restaurants & Cafes</button>
+                <button class="filter-btn" data-filter="storytelling-vlogs">Storytelling & Vlogs</button>
             </div>
             <div class="portfolio-grid">
-                <div class="portfolio-item" data-category="hotels">
+                <!-- All Category - One from each -->
+                <div class="portfolio-item" data-category="all beauty-fashion">
+                    <div class="portfolio-thumbnail">
+                        <video width="300" height="200" muted preload="metadata">
+                            <source src="video/Beauty_Fashion/a/a.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="portfolio-overlay">
+                            <button class="play-btn" onclick="openLightbox('video/Beauty_Fashion/a/a.mp4')"><i class="fas fa-play"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="all hotel-airbnb">
                     <div class="portfolio-thumbnail">
                         <img src="https://via.placeholder.com/300x200/f5f5dc/8b7355?text=Hotel+Content" alt="Hotel Content">
                         <div class="portfolio-overlay">
-                            <button class="play-btn" onclick="openLightbox('video1')"><i class="fas fa-play"></i></button>
+                            <button class="play-btn" onclick="openLightbox('placeholder')"><i class="fas fa-play"></i></button>
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="vlogs">
+                
+                <div class="portfolio-item" data-category="all places-experiences">
+                    <div class="portfolio-thumbnail">
+                        <img src="https://via.placeholder.com/300x200/f5f5dc/8b7355?text=Places+Content" alt="Places Content">
+                        <div class="portfolio-overlay">
+                            <button class="play-btn" onclick="openLightbox('placeholder')"><i class="fas fa-play"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="all restaurants-cafes">
+                    <div class="portfolio-thumbnail">
+                        <img src="https://via.placeholder.com/300x200/f5f5dc/8b7355?text=Restaurant+Content" alt="Restaurant Content">
+                        <div class="portfolio-overlay">
+                            <button class="play-btn" onclick="openLightbox('placeholder')"><i class="fas fa-play"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="all storytelling-vlogs">
                     <div class="portfolio-thumbnail">
                         <img src="https://via.placeholder.com/300x200/f5f5dc/8b7355?text=Vlog+Content" alt="Vlog Content">
                         <div class="portfolio-overlay">
-                            <button class="play-btn" onclick="openLightbox('video2')"><i class="fas fa-play"></i></button>
+                            <button class="play-btn" onclick="openLightbox('placeholder')"><i class="fas fa-play"></i></button>
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="aesthetic">
+
+                <!-- Beauty & Fashion - All 6 videos -->
+                <div class="portfolio-item" data-category="beauty-fashion">
                     <div class="portfolio-thumbnail">
-                        <img src="https://via.placeholder.com/300x200/f5f5dc/8b7355?text=Aesthetic+Content" alt="Aesthetic Content">
+                        <video width="300" height="200" muted preload="metadata">
+                            <source src="video/Beauty_Fashion/a.mp4" type="video/quicktime">
+                        </video>
                         <div class="portfolio-overlay">
-                            <button class="play-btn" onclick="openLightbox('video3')"><i class="fas fa-play"></i></button>
+                            <button class="play-btn" onclick="openLightbox('video/Beauty_Fashion/78ed63068d3647ed96bee32329e1c3c3.MOV')"><i class="fas fa-play"></i></button>
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="hotels">
-                    <div class="portfolio-thumbnail">
-                        <img src="https://via.placeholder.com/300x200/f5f5dc/8b7355?text=Airbnb+Content" alt="Airbnb Content">
-                        <div class="portfolio-overlay">
-                            <button class="play-btn" onclick="openLightbox('video4')"><i class="fas fa-play"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="vlogs">
-                    <div class="portfolio-thumbnail">
-                        <img src="https://via.placeholder.com/300x200/f5f5dc/8b7355?text=Travel+Vlog" alt="Travel Vlog">
-                        <div class="portfolio-overlay">
-                            <button class="play-btn" onclick="openLightbox('video5')"><i class="fas fa-play"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="aesthetic">
-                    <div class="portfolio-thumbnail">
-                        <img src="https://via.placeholder.com/300x200/f5f5dc/8b7355?text=Brand+Content" alt="Brand Content">
-                        <div class="portfolio-overlay">
-                            <button class="play-btn" onclick="openLightbox('video6')"><i class="fas fa-play"></i></button>
-                        </div>
-                    </div>
-                </div>
+            
             </div>
         </div>
     </section>
@@ -189,7 +204,6 @@
                             <strong>— Hotel Manager</strong>
                         </div>
                     </div>
-                </div>
                 <div class="testimonial-card">
                     <div class="testimonial-content">
                         <p>"Georgia's eye for aesthetic detail and storytelling ability made our property look absolutely stunning. Highly recommend!"</p>

@@ -37,7 +37,8 @@ filterBtns.forEach(btn => {
         const filter = btn.getAttribute('data-filter');
         
         portfolioItems.forEach(item => {
-            if (filter === 'all' || item.getAttribute('data-category') === filter) {
+            const categories = item.getAttribute('data-category').split(' ');
+            if (filter === 'all' || categories.includes(filter)) {
                 item.style.display = 'block';
             } else {
                 item.style.display = 'none';
@@ -47,19 +48,24 @@ filterBtns.forEach(btn => {
 });
 
 // Lightbox functionality
-function openLightbox(videoId) {
+function openLightbox(videoPath) {
     const lightbox = document.getElementById('lightbox');
     const videoContainer = document.getElementById('lightbox-video');
     
-    // Replace with actual video embed code
-    videoContainer.innerHTML = `
-        <div style="padding: 56.25% 0 0 0; position: relative;">
-            <iframe src="https://player.vimeo.com/video/123456789" 
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-                    frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
-            </iframe>
-        </div>
-    `;
+    if (videoPath === 'placeholder') {
+        videoContainer.innerHTML = `
+            <div style="padding: 56.25% 0 0 0; position: relative; display: flex; align-items: center; justify-content: center; background: #f5f5dc;">
+                <p style="color: #8b7355; font-size: 18px;">Content coming soon</p>
+            </div>
+        `;
+    } else {
+        videoContainer.innerHTML = `
+            <video controls autoplay style="width: 100%; height: auto; max-height: 80vh;">
+                <source src="${videoPath}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        `;
+    }
     
     lightbox.style.display = 'block';
     document.body.style.overflow = 'hidden';

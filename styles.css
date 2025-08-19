@@ -827,31 +827,7 @@ body {
     background-color: white;
 }
 
-.portfolio-filters {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 3rem;
-}
 
-.filter-btn {
-    padding: 8px 16px;
-    background-color: transparent;
-    color: #6b5b73;
-    border: 2px solid #e0e0e0;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 0.9rem;
-}
-
-.filter-btn.active,
-.filter-btn:hover {
-    background-color: #d4a574;
-    color: white;
-    border-color: #d4a574;
-}
 
 .portfolio-grid {
     display: grid;
@@ -950,8 +926,20 @@ body {
 
 .testimonials .section-title {
     text-align: center;
-    margin-bottom: 3.5rem;
+    margin-bottom: 1rem;
     position: relative;
+}
+
+.testimonials-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #6b5b73;
+    margin-bottom: 3.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    font-weight: 400;
 }
 
 .testimonials .section-title::after {
@@ -1370,6 +1358,243 @@ body {
     }
 }
 
+/* iPhone-style Video Portfolio Styles */
+.portfolio-subtitle {
+    font-size: 1.2rem;
+    color: #6b5b73;
+    text-align: center;
+    margin-bottom: 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.portfolio-description {
+    font-size: 1rem;
+    color: #8b7355;
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.portfolio-section {
+    margin-bottom: 4rem;
+}
+
+.portfolio-section-title {
+    font-size: 1.8rem;
+    color: #8b7355;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.iphone-video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.iphone-video-container {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.iphone-video-container:hover {
+    transform: translateY(-5px);
+}
+
+.iphone-frame {
+    width: 200px;
+    height: 400px;
+    background: linear-gradient(145deg, #2c2c2e, #1c1c1e);
+    border-radius: 35px;
+    padding: 8px;
+    box-shadow: 
+        0 0 0 2px #3a3a3c,
+        0 10px 30px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.iphone-frame::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 6px;
+    background: #3a3a3c;
+    border-radius: 3px;
+    z-index: 10;
+}
+
+.iphone-frame::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 4px;
+    background: #3a3a3c;
+    border-radius: 2px;
+    z-index: 10;
+}
+
+.iphone-screen {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    border-radius: 27px;
+    overflow: hidden;
+    position: relative;
+}
+
+.portfolio-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 27px;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    border-radius: 27px;
+}
+
+.iphone-video-container:hover .video-overlay {
+    opacity: 0;
+}
+
+.play-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #8b7355;
+    transition: all 0.3s ease;
+}
+
+.play-icon:hover {
+    background: white;
+    transform: scale(1.1);
+}
+
+/* Service Card Video Format Tags */
+.video-formats {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.format-tag {
+    background: #f5f5f5;
+    color: #666;
+    border: 1px solid #ddd;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* Portfolio Filters Update */
+.portfolio-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 2px solid #d4a574;
+    color: #8b7355;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #d4a574;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design for iPhone Videos */
+@media (min-width: 768px) {
+    .iphone-video-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+    
+    .iphone-frame {
+        width: 220px;
+        height: 440px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .iphone-video-grid {
+        gap: 3rem;
+    }
+    
+    .iphone-frame {
+        width: 240px;
+        height: 480px;
+    }
+}
+
+@media (max-width: 767px) {
+    .iphone-video-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .iphone-frame {
+        width: 160px;
+        height: 320px;
+    }
+    
+    .portfolio-section-title {
+        font-size: 1.5rem;
+    }
+    
+    .play-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
 /* Utility Classes */
 .hidden {
     display: none;
@@ -1504,10 +1729,10 @@ body {
 .country-pin {
     width: 16px;
     height: 16px;
-    background-color: #d4a574;
+    background-color: #e91e63;
     border-radius: 50%;
     border: 2px solid white;
-    box-shadow: 0 2px 8px rgba(212, 165, 116, 0.4);
+    box-shadow: 0 2px 8px rgba(233, 30, 99, 0.4);
     flex-shrink: 0;
 }
 
@@ -1552,6 +1777,15 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .map-container {
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .map-header {
+        padding: 1.5rem 1rem;
+    }
+    
     .map-title {
         font-size: 2rem;
     }
@@ -1560,18 +1794,72 @@ body {
         font-size: 1rem;
     }
     
-    .map-header {
+    .map-content {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .map-left {
+        width: 100%;
+        height: 60vh;
+        min-height: 400px;
+    }
+    
+    .map-right {
+        width: 100%;
+        border-left: none;
+        border-top: 1px solid #e0e0e0;
+        max-height: none;
+    }
+    
+    .countries-list {
         padding: 1.5rem 1rem;
     }
     
-    .map-legend {
-        top: 100px;
-        right: 10px;
+    .countries-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .country-item {
         padding: 0.8rem;
+        gap: 0.8rem;
+    }
+    
+    .country-info h4 {
+        font-size: 1rem;
+    }
+    
+    .country-info p {
+        font-size: 0.85rem;
     }
     
     .interactive-map {
-        min-height: calc(100vh - 150px);
+        min-height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .map-header {
+        padding: 1rem;
+    }
+    
+    .map-left {
+        height: 50vh;
+        min-height: 350px;
+    }
+    
+    .countries-list {
+        padding: 1rem;
+    }
+    
+    .country-item {
+        padding: 0.7rem;
+        margin: 0;
+    }
+    
+    .countries-title {
+        font-size: 1.3rem;
     }
 }
 
@@ -1588,4 +1876,27 @@ body {
     background: rgba(0, 0, 0, 0.9);
     padding: 20px;
     border-radius: 8px;
+}
+
+/* Custom map pin styling - Pink pins for interactive map */
+.custom-pin {
+    width: 20px;
+    height: 20px;
+    background-color: #e91e63;
+    border: 3px solid white;
+    border-radius: 50%;
+    box-shadow: 0 3px 10px rgba(233, 30, 99, 0.4);
+    position: relative;
+}
+
+.custom-pin::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
 }

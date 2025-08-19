@@ -62,7 +62,7 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About Section - Updated with new content -->
     <section id="about" class="about">
         <div class="container">
             <div class="about-content">
@@ -71,9 +71,14 @@
                 </div>
                 <div class="about-text">
                     <h2 class="section-title">The Girl Behind the Lens</h2>
-                    <p>Hey there! I'm Georgia, a passionate UGC creator and travel storyteller who believes in the power of authentic connection. Through my lens, I capture not just moments, but emotions that resonate with audiences worldwide.</p>
-                    <p>With a keen eye for aesthetic detail and a natural storytelling ability, I help brands create content that doesn't just look beautiful—it feels genuine and connects with real people in meaningful ways.</p>
-                    <p>Whether I'm exploring hidden gems in bustling cities or showcasing the perfect hotel stay, my content always focuses on creating that authentic connection between your brand and your audience.</p>
+                    <p>I'm Georgia — a UGC creator and travel storyteller, inviting brands, businesses, and audiences to explore the world with me.</p>
+                    <p>The best content doesn't just sell — it connects. It tells a story, sparks emotion, and builds trust that lasts.</p>
+                    <p>From beautiful Airbnbs to hidden local gems, I create relatable, emotionally-led content that brings places and products to life — because people don't just want to see your brand, they want to feel it.</p>
+                    <p>My content blends luxury with affordability — showcasing beautiful experiences and stays that feel both aspirational and accessible.</p>
+                    <p>I don't just make content — I take people with me. Because they trust my story, my voice, and my personality.</p>
+                    <p><strong>Quality over quantity.</strong></p>
+                    <p>I'm proud to have a fast-growing, highly engaged community with over 750,000 monthly views across platforms — reaching fresh eyes and loyal followers alike.</p>
+                    <p>Through immersive storytelling and a personality-led approach, people don't just watch — they listen, connect, and trust my word.</p>
                 </div>
             </div>
         </div>
@@ -89,33 +94,52 @@
                         <i class="fas fa-bed"></i>
                     </div>
                     <h3>Hotels & Airbnbs</h3>
-                    <p>Showcase your property with authentic, engaging content that highlights the experience.</p>
-                    <button class="service-btn" onclick="scrollToSection('portfolio')">View Portfolio</button>
+                    <p>Showcase your property with authentic, engaging content that highlights the unique experience and atmosphere of your space.</p>
+                    <button class="service-btn" onclick="filterPortfolio('hotel-airbnb')">View Portfolio</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-sparkles"></i>
+                    </div>
+                    <h3>Beauty & Fashion</h3>
+                    <p>Capture the essence of beauty and style with content that resonates with your target audience and showcases products authentically.</p>
+                    <button class="service-btn" onclick="filterPortfolio('beauty-fashion')">View Portfolio</button>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-video"></i>
                     </div>
-                    <h3>Vlog-style / Voiceovers</h3>
-                    <p>Dynamic storytelling that brings your brand to life through personal narratives.</p>
-                    <button class="service-btn" onclick="scrollToSection('portfolio')">View Portfolio</button>
+                    <h3>Storytelling & Vlogs</h3>
+                    <p>Dynamic storytelling that brings your brand to life through personal narratives and engaging voiceovers that connect with viewers.</p>
+                    <button class="service-btn" onclick="filterPortfolio('storytelling-vlogs')">View Portfolio</button>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-palette"></i>
+                        <i class="fas fa-utensils"></i>
                     </div>
-                    <h3>Aesthetic Edits</h3>
-                    <p>Beautifully crafted content that maintains your brand's visual identity.</p>
-                    <button class="service-btn" onclick="scrollToSection('portfolio')">View Portfolio</button>
+                    <h3>Restaurants & Cafes</h3>
+                    <p>Mouth-watering content that showcases your culinary offerings and dining atmosphere in an appetizing and authentic way.</p>
+                    <button class="service-btn" onclick="filterPortfolio('restaurants-cafes')">View Portfolio</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Places & Experiences</h3>
+                    <p>Capture the magic of destinations and experiences, inspiring wanderlust and showcasing what makes each location special.</p>
+                    <button class="service-btn" onclick="filterPortfolio('places-experiences')">View Portfolio</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
+    <!-- Portfolio Section - iPhone-style layout -->
     <section id="portfolio" class="portfolio">
         <div class="container">
             <h2 class="section-title">See the Story</h2>
+            <p class="portfolio-subtitle">Here's a glimpse into the stories I've told — and the brands and businesses I've brought along the way.</p>
+            <p class="portfolio-description">Every video you see here was created with intention, emotion, and a whole lot of heart. Let's create something together that people remember.</p>
+            
             <div class="portfolio-filters">
                 <button class="filter-btn active" data-filter="all">All</button>
                 <button class="filter-btn" data-filter="beauty-fashion">Beauty & Fashion</button>
@@ -124,226 +148,217 @@
                 <button class="filter-btn" data-filter="restaurants-cafes">Restaurants & Cafes</button>
                 <button class="filter-btn" data-filter="storytelling-vlogs">Storytelling & Vlogs</button>
             </div>
-            <div class="portfolio-grid">
-                <!-- All Category - One from each -->
-     
-                <!-- Beauty & Fashion - All videos -->
-                <div class="portfolio-item" data-category="beauty-fashion">
-                    <div class="portfolio-thumbnail">
-                        <video width="300" height="200" muted preload="metadata">
-                            <source src="video/Beauty_Fashion/a.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="portfolio-overlay">
-                            <button class="play-btn" onclick="openLightbox('video/Beauty_Fashion/a.mp4')"><i class="fas fa-play"></i></button>
+            
+            <!-- Beauty & Fashion Section -->
+            <div class="portfolio-section" id="beauty-fashion-section">
+                <h3 class="portfolio-section-title">Beauty & Fashion</h3>
+                <div class="iphone-video-grid">
+                    <div class="iphone-video-container" data-category="beauty-fashion">
+                        <div class="iphone-frame">
+                            <div class="iphone-screen">
+                                <video muted preload="metadata" class="portfolio-video">
+                                    <source src="video/Beauty_Fashion/a.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-overlay">
+                                    <div class="play-icon"><i class="fas fa-play"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="iphone-video-container" data-category="beauty-fashion">
+                        <div class="iphone-frame">
+                            <div class="iphone-screen">
+                                <video muted preload="metadata" class="portfolio-video">
+                                    <source src="video/Beauty_Fashion/b.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-overlay">
+                                    <div class="play-icon"><i class="fas fa-play"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="iphone-video-container" data-category="beauty-fashion">
+                        <div class="iphone-frame">
+                            <div class="iphone-screen">
+                                <video muted preload="metadata" class="portfolio-video">
+                                    <source src="video/Beauty_Fashion/c.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-overlay">
+                                    <div class="play-icon"><i class="fas fa-play"></i></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="portfolio-item" data-category="beauty-fashion">
-                    <div class="portfolio-thumbnail">
-                        <video width="300" height="200" muted preload="metadata">
-                            <source src="video/Beauty_Fashion/b.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="portfolio-overlay">
-                            <button class="play-btn" onclick="openLightbox('video/Beauty_Fashion/b.mp4')"><i class="fas fa-play"></i></button>
+            </div>
+            
+            <!-- Hotel & Airbnb Section -->
+            <div class="portfolio-section" id="hotel-airbnb-section">
+                <h3 class="portfolio-section-title">Hotels & Airbnbs</h3>
+                <div class="iphone-video-grid">
+                    <div class="iphone-video-container" data-category="hotel-airbnb">
+                        <div class="iphone-frame">
+                            <div class="iphone-screen">
+                                <video muted preload="metadata" class="portfolio-video">
+                                    <source src="video/Hotel_Airbnb/a.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-overlay">
+                                    <div class="play-icon"><i class="fas fa-play"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="iphone-video-container" data-category="hotel-airbnb">
+                        <div class="iphone-frame">
+                            <div class="iphone-screen">
+                                <video muted preload="metadata" class="portfolio-video">
+                                    <source src="video/Hotel_Airbnb/b.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-overlay">
+                                    <div class="play-icon"><i class="fas fa-play"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="iphone-video-container" data-category="hotel-airbnb">
+                        <div class="iphone-frame">
+                            <div class="iphone-screen">
+                                <video muted preload="metadata" class="portfolio-video">
+                                    <source src="video/Hotel_Airbnb/c.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-overlay">
+                                    <div class="play-icon"><i class="fas fa-play"></i></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="portfolio-item" data-category="beauty-fashion">
-                    <div class="portfolio-thumbnail">
-                        <video width="300" height="200" muted preload="metadata">
-                            <source src="video/Beauty_Fashion/c.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="portfolio-overlay">
-                            <button class="play-btn" onclick="openLightbox('video/Beauty_Fashion/c.mp4')"><i class="fas fa-play"></i></button>
+            </div>
+            
+            <!-- Places & Experiences Section -->
+            <div class="portfolio-section" id="places-experiences-section">
+                <h3 class="portfolio-section-title">Places & Experiences</h3>
+                <div class="iphone-video-grid">
+                    <div class="iphone-video-container" data-category="places-experiences">
+                        <div class="iphone-frame">
+                            <div class="iphone-screen">
+                                <video muted preload="metadata" class="portfolio-video">
+                                    <source src="video/Place_Experience/a.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-overlay">
+                                    <div class="play-icon"><i class="fas fa-play"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="iphone-video-container" data-category="places-experiences">
+                        <div class="iphone-frame">
+                            <div class="iphone-screen">
+                                <video muted preload="metadata" class="portfolio-video">
+                                    <source src="video/Place_Experience/b.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-overlay">
+                                    <div class="play-icon"><i class="fas fa-play"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="iphone-video-container" data-category="places-experiences">
+                        <div class="iphone-frame">
+                            <div class="iphone-screen">
+                                <video muted preload="metadata" class="portfolio-video">
+                                    <source src="video/Place_Experience/c.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-overlay">
+                                    <div class="play-icon"><i class="fas fa-play"></i></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Hotel & Airbnb - All videos -->
-                <div class="portfolio-item" data-category="hotel-airbnb">
-                    <div class="portfolio-thumbnail">
-                        <video width="300" height="200" muted preload="metadata">
-                            <source src="video/Hotel_Airbnb/a.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="portfolio-overlay">
-                            <button class="play-btn" onclick="openLightbox('video/Hotel_Airbnb/a.mp4')"><i class="fas fa-play"></i></button>
+            </div>
+            
+            <!-- Restaurants & Cafes Section -->
+            <div class="portfolio-section" id="restaurants-cafes-section">
+                <h3 class="portfolio-section-title">Restaurants & Cafes</h3>
+                <div class="iphone-video-grid">
+                    <div class="iphone-video-container" data-category="restaurants-cafes">
+                        <div class="iphone-frame">
+                            <div class="iphone-screen">
+                                <video muted preload="metadata" class="portfolio-video">
+                                    <source src="video/Restaurant_Cafe/a.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-overlay">
+                                    <div class="play-icon"><i class="fas fa-play"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="iphone-video-container" data-category="restaurants-cafes">
+                        <div class="iphone-frame">
+                            <div class="iphone-screen">
+                                <video muted preload="metadata" class="portfolio-video">
+                                    <source src="video/Restaurant_Cafe/b.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-overlay">
+                                    <div class="play-icon"><i class="fas fa-play"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="iphone-video-container" data-category="restaurants-cafes">
+                        <div class="iphone-frame">
+                            <div class="iphone-screen">
+                                <video muted preload="metadata" class="portfolio-video">
+                                    <source src="video/Restaurant_Cafe/c.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-overlay">
+                                    <div class="play-icon"><i class="fas fa-play"></i></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="portfolio-item" data-category="hotel-airbnb">
-                    <div class="portfolio-thumbnail">
-                        <video width="300" height="200" muted preload="metadata">
-                            <source src="video/Hotel_Airbnb/b.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="portfolio-overlay">
-                            <button class="play-btn" onclick="openLightbox('video/Hotel_Airbnb/b.mp4')"><i class="fas fa-play"></i></button>
+            </div>
+            
+            <!-- Storytelling & Vlogs Section -->
+            <div class="portfolio-section" id="storytelling-vlogs-section">
+                <h3 class="portfolio-section-title">Storytelling & Vlogs</h3>
+                <div class="iphone-video-grid">
+                    <div class="iphone-video-container" data-category="storytelling-vlogs">
+                        <div class="iphone-frame">
+                            <div class="iphone-screen">
+                                <video muted preload="metadata" class="portfolio-video">
+                                    <source src="video/Storytelling_Vlog/a.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-overlay">
+                                    <div class="play-icon"><i class="fas fa-play"></i></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="portfolio-item" data-category="hotel-airbnb">
-                    <div class="portfolio-thumbnail">
-                        <video width="300" height="200" muted preload="metadata">
-                            <source src="video/Hotel_Airbnb/c.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="portfolio-overlay">
-                            <button class="play-btn" onclick="openLightbox('video/Hotel_Airbnb/c.mp4')"><i class="fas fa-play"></i></button>
+                    <div class="iphone-video-container" data-category="storytelling-vlogs">
+                        <div class="iphone-frame">
+                            <div class="iphone-screen">
+                                <video muted preload="metadata" class="portfolio-video">
+                                    <source src="video/Storytelling_Vlog/b.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-overlay">
+                                    <div class="play-icon"><i class="fas fa-play"></i></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Places & Experiences - All videos -->
-                <div class="portfolio-item" data-category="places-experiences">
-                    <div class="portfolio-thumbnail">
-                        <video width="300" height="200" muted preload="metadata">
-                            <source src="video/Place_Experience/a.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="portfolio-overlay">
-                            <button class="play-btn" onclick="openLightbox('video/Place_Experience/a.mp4')"><i class="fas fa-play"></i></button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-category="places-experiences">
-                    <div class="portfolio-thumbnail">
-                        <video width="300" height="200" muted preload="metadata">
-                            <source src="video/Place_Experience/b.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="portfolio-overlay">
-                            <button class="play-btn" onclick="openLightbox('video/Place_Experience/b.mp4')"><i class="fas fa-play"></i></button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-category="places-experiences">
-                    <div class="portfolio-thumbnail">
-                        <video width="300" height="200" muted preload="metadata">
-                            <source src="video/Place_Experience/c.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="portfolio-overlay">
-                            <button class="play-btn" onclick="openLightbox('video/Place_Experience/c.mp4')"><i class="fas fa-play"></i></button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-category="places-experiences">
-                    <div class="portfolio-thumbnail">
-                        <video width="300" height="200" muted preload="metadata">
-                            <source src="video/Place_Experience/d.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="portfolio-overlay">
-                            <button class="play-btn" onclick="openLightbox('video/Place_Experience/d.mp4')"><i class="fas fa-play"></i></button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-category="places-experiences">
-                    <div class="portfolio-thumbnail">
-                        <video width="300" height="200" muted preload="metadata">
-                            <source src="video/Place_Experience/e.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="portfolio-overlay">
-                            <button class="play-btn" onclick="openLightbox('video/Place_Experience/e.mp4')"><i class="fas fa-play"></i></button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-category="places-experiences">
-                    <div class="portfolio-thumbnail">
-                        <video width="300" height="200" muted preload="metadata">
-                            <source src="video/Place_Experience/f.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="portfolio-overlay">
-                            <button class="play-btn" onclick="openLightbox('video/Place_Experience/f.mp4')"><i class="fas fa-play"></i></button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Restaurants & Cafes - All videos -->
-                <div class="portfolio-item" data-category="restaurants-cafes">
-                    <div class="portfolio-thumbnail">
-                        <video width="300" height="200" muted preload="metadata">
-                            <source src="video/Restaurant_Cafe/a.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="portfolio-overlay">
-                            <button class="play-btn" onclick="openLightbox('video/Restaurant_Cafe/a.mp4')"><i class="fas fa-play"></i></button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-category="restaurants-cafes">
-                    <div class="portfolio-thumbnail">
-                        <video width="300" height="200" muted preload="metadata">
-                            <source src="video/Restaurant_Cafe/b.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="portfolio-overlay">
-                            <button class="play-btn" onclick="openLightbox('video/Restaurant_Cafe/b.mp4')"><i class="fas fa-play"></i></button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-category="restaurants-cafes">
-                    <div class="portfolio-thumbnail">
-                        <video width="300" height="200" muted preload="metadata">
-                            <source src="video/Restaurant_Cafe/c.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="portfolio-overlay">
-                            <button class="play-btn" onclick="openLightbox('video/Restaurant_Cafe/c.mp4')"><i class="fas fa-play"></i></button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Storytelling & Vlogs - All videos -->
-                <div class="portfolio-item" data-category="storytelling-vlogs">
-                    <div class="portfolio-thumbnail">
-                        <video width="300" height="200" muted preload="metadata">
-                            <source src="video/Storytelling_Vlog/a.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="portfolio-overlay">
-                            <button class="play-btn" onclick="openLightbox('video/Storytelling_Vlog/a.mp4')"><i class="fas fa-play"></i></button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-category="storytelling-vlogs">
-                    <div class="portfolio-thumbnail">
-                        <video width="300" height="200" muted preload="metadata">
-                            <source src="video/Storytelling_Vlog/b.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="portfolio-overlay">
-                            <button class="play-btn" onclick="openLightbox('video/Storytelling_Vlog/b.mp4')"><i class="fas fa-play"></i></button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-category="storytelling-vlogs">
-                    <div class="portfolio-thumbnail">
-                        <video width="300" height="200" muted preload="metadata">
-                            <source src="video/Storytelling_Vlog/c.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="portfolio-overlay">
-                            <button class="play-btn" onclick="openLightbox('video/Storytelling_Vlog/c.mp4')"><i class="fas fa-play"></i></button>
+                    <div class="iphone-video-container" data-category="storytelling-vlogs">
+                        <div class="iphone-frame">
+                            <div class="iphone-screen">
+                                <video muted preload="metadata" class="portfolio-video">
+                                    <source src="video/Storytelling_Vlog/c.mp4" type="video/mp4">
+                                </video>
+                                <div class="video-overlay">
+                                    <div class="play-icon"><i class="fas fa-play"></i></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -351,7 +366,7 @@
         </div>
     </section>
 
-    <!-- Travel Map Section -->
+    <!-- Travel Map Section - Updated with pink pins -->
     <section id="travel-map" class="travel-map">
         <div class="map-container">
             <div class="map-header">
@@ -367,98 +382,98 @@
                         <h3 class="countries-title">Content Creation Locations</h3>
                         <div class="countries-grid">
                             <div class="country-item" data-coords="[54.7023545, -3.2765753]">
-                                <div class="country-pin"></div>
+                                <div class="country-pin pink-pin"></div>
                                 <div class="country-info">
                                     <h4>United Kingdom</h4>
                                     <p>Home base and content creation hub</p>
                                 </div>
                             </div>
                             <div class="country-item" data-coords="[56.7861112, -4.1140516]">
-                                <div class="country-pin"></div>
+                                <div class="country-pin pink-pin"></div>
                                 <div class="country-info">
                                     <h4>Scotland</h4>
                                     <p>Stunning landscapes and cultural content</p>
                                 </div>
                             </div>
                             <div class="country-item" data-coords="[13.7563309, 100.5017651]">
-                                <div class="country-pin"></div>
+                                <div class="country-pin pink-pin"></div>
                                 <div class="country-info">
                                     <h4>Thailand</h4>
                                     <p>Vibrant street life and cultural experiences</p>
                                 </div>
                             </div>
                             <div class="country-item" data-coords="[16.0544068, 107.8337663]">
-                                <div class="country-pin"></div>
+                                <div class="country-pin pink-pin"></div>
                                 <div class="country-info">
                                     <h4>Vietnam</h4>
                                     <p>Rich culture and breathtaking scenery</p>
                                 </div>
                             </div>
                             <div class="country-item" data-coords="[35.6828387, 139.7594549]">
-                                <div class="country-pin"></div>
+                                <div class="country-pin pink-pin"></div>
                                 <div class="country-info">
                                     <h4>Japan</h4>
                                     <p>Modern culture meets traditional beauty</p>
                                 </div>
                             </div>
                             <div class="country-item" data-coords="[-8.4095178, 115.188916]">
-                                <div class="country-pin"></div>
+                                <div class="country-pin pink-pin"></div>
                                 <div class="country-info">
                                     <h4>Bali, Indonesia</h4>
                                     <p>Tropical paradise and spiritual retreats</p>
                                 </div>
                             </div>
                             <div class="country-item" data-coords="[12.7503486, 122.7312101]">
-                                <div class="country-pin"></div>
+                                <div class="country-pin pink-pin"></div>
                                 <div class="country-info">
                                     <h4>Philippines</h4>
                                     <p>Island adventures and pristine beaches</p>
                                 </div>
                             </div>
                             <div class="country-item" data-coords="[18.1239696, 103.8160051]">
-                                <div class="country-pin"></div>
+                                <div class="country-pin pink-pin"></div>
                                 <div class="country-info">
                                     <h4>Laos</h4>
                                     <p>Serene landscapes and authentic experiences</p>
                                 </div>
                             </div>
                             <div class="country-item" data-coords="[11.5564372, 104.9282099]">
-                                <div class="country-pin"></div>
+                                <div class="country-pin pink-pin"></div>
                                 <div class="country-info">
                                     <h4>Cambodia</h4>
                                     <p>Ancient temples and cultural heritage</p>
                                 </div>
                             </div>
                             <div class="country-item" data-coords="[4.5693754, 102.2656823]">
-                                <div class="country-pin"></div>
+                                <div class="country-pin pink-pin"></div>
                                 <div class="country-info">
                                     <h4>Malaysia</h4>
                                     <p>Diverse culture and urban exploration</p>
                                 </div>
                             </div>
                             <div class="country-item" data-coords="[7.5554942, 80.7137847]">
-                                <div class="country-pin"></div>
+                                <div class="country-pin pink-pin"></div>
                                 <div class="country-info">
                                     <h4>Sri Lanka</h4>
                                     <p>Tea plantations and coastal beauty</p>
                                 </div>
                             </div>
                             <div class="country-item" data-coords="[38.9597594, 34.9249653]">
-                                <div class="country-pin"></div>
+                                <div class="country-pin pink-pin"></div>
                                 <div class="country-info">
                                     <h4>Turkey</h4>
                                     <p>Where Europe meets Asia - rich history</p>
                                 </div>
                             </div>
                             <div class="country-item" data-coords="[1.357107, 103.8194992]">
-                                <div class="country-pin"></div>
+                                <div class="country-pin pink-pin"></div>
                                 <div class="country-info">
                                     <h4>Singapore</h4>
                                     <p>Modern city-state and culinary adventures</p>
                                 </div>
                             </div>
                             <div class="country-item" data-coords="[38.9953683, 21.9877132]">
-                                <div class="country-pin"></div>
+                                <div class="country-pin pink-pin"></div>
                                 <div class="country-info">
                                     <h4>Greece</h4>
                                     <p>Ancient history and Mediterranean charm</p>
@@ -471,32 +486,36 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- Testimonials Section - Updated with real reviews -->
     <section id="testimonials" class="testimonials">
         <div class="container">
             <h2 class="section-title">From People I've Worked With</h2>
+            <p class="testimonials-subtitle">Real feedback from brands, stays, and people I've worked with — because results matter, but relationships matter more.</p>
             <div class="testimonials-container">
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        <p>"Georgia's content perfectly captured the essence of our brand. Her authentic storytelling approach resulted in incredible engagement rates."</p>
+                        <p>"I'm writing you to express my thank you to you for your video from your TikTok (the ones has 27K Views). The Video is very helpful to us that many people come by your recommendation. It is our pleasure to working with you (you are so nicely and friendly). Wish you all the best and hope to seeing you at our place at the soonest time."</p>
                         <div class="testimonial-author">
-                            <strong>— Brand Partner</strong>
+                            <strong>— Nhu Tran</strong>
+                            <span>Owner of Oat Nails and Spa Hoi An, Vietnam</span>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        <p>"Working with Georgia was seamless. She understood our vision immediately and delivered content that exceeded our expectations."</p>
+                        <p>"We are writing to say our thank you very much for your support video about Zen House on TikTok and Instagram. It is very helpful to us, many people asking for the place and accommodation. We also have more direct booking from your video. Once again, wishing you all the best and hope to have chance to collab with you in the future."</p>
                         <div class="testimonial-author">
-                            <strong>— Hotel Manager</strong>
+                            <strong>— Nhu Tran</strong>
+                            <span>General Manager of Zen House Hoi An</span>
                         </div>
-                        </div>
+                    </div>
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        <p>"Georgia's eye for aesthetic detail and storytelling ability made our property look absolutely stunning. Highly recommend!"</p>
+                        <p>"I had the pleasure of meeting and working with Georgia during her time in Vietnam. From the very first interaction, I was impressed by her kindness, professionalism, and creativity. She has a natural ability to connect with people and bring out authentic stories through her content. What stood out to me most was her eye for detail and her passion for creating meaningful work. She approaches everything with positivity and genuine care, which makes the collaboration experience so enjoyable."</p>
                         <div class="testimonial-author">
-                            <strong>— Airbnb Host</strong>
+                            <strong>— Quynh Nhu Nguyen</strong>
+                            <span>Founder – Mina Lash & Brow, Hoi An</span>
                         </div>
                     </div>
                 </div>

@@ -340,6 +340,19 @@ function toggleReadMore() {
     }
 }
 
+function toggleServicesMore() {
+    const content = document.getElementById('servicesMoreContent');
+    const button = document.getElementById('servicesShowMoreBtn');
+    
+    if (content.classList.contains('show')) {
+        content.classList.remove('show');
+        button.textContent = 'Show More';
+    } else {
+        content.classList.add('show');
+        button.textContent = 'Show Less';
+    }
+}
+
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Check if map container exists

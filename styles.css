@@ -1004,6 +1004,31 @@ body {
     color: white;
 }
 
+/* Services Show More Button */
+.services-show-more-btn {
+    display: none;
+    margin: 3rem auto 0;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #d4a574 0%, #8b7355 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(212, 165, 116, 0.3);
+}
+
+.services-show-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 165, 116, 0.4);
+}
+
+.services-more-content {
+    display: contents;
+}
+
 /* Portfolio Section */
 .portfolio {
     padding: 5rem 0;
@@ -1473,6 +1498,31 @@ body {
     font-size: 2rem;
     cursor: pointer;
     z-index: 2001;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .service-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .services-show-more-btn {
+        display: block;
+    }
+    
+    .services-more-content {
+        display: none;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+    
+    .services-more-content.show {
+        display: contents;
+    }
 }
 
 /* Responsive Design - Tablet */

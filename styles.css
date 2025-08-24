@@ -749,7 +749,7 @@ body {
 .about-text {
     flex: 1;
     text-align: left;
-    padding: 2.5rem;
+    padding: 2rem;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(139, 115, 85, 0.1), 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -761,10 +761,10 @@ body {
 }
 
 .about-text .section-title {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     font-weight: 300;
     color: #2c2c2c;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     position: relative;
     letter-spacing: -0.02em;
 }
@@ -781,9 +781,9 @@ body {
 }
 
 .about-text p {
-    margin-bottom: 1.8rem;
-    font-size: 0.95rem;
-    line-height: 1.8;
+    margin-bottom: 1.2rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
     color: #4a4a4a;
     font-weight: 400;
     letter-spacing: 0.01em;

@@ -338,4 +338,96 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Setup service buttons
     setupServiceButtons();
+    
+    // Initialize testimonials carousel
+    initializeTestimonialsCarousel();
 });
+
+// Testimonials Carousel Functionality
+let currentTestimonialIndex = 0;
+let testimonialInterval;
+
+function initializeTestimonialsCarousel() {
+    const testimonials = document.querySelectorAll('.testimonial-card');
+    if (testimonials.length === 0) return;
+
+    // Start auto-rotation
+    startTestimonialAutoRotation();
+
+    // Pause auto-rotation on hover
+    const carousel = document.querySelector('.testimonials-carousel');
+    if (carousel) {
+        carousel.addEventListener('mouseenter', stopTestimonialAutoRotation);
+        carousel.addEventListener('mouseleave', startTestimonialAutoRotation);
+    }
+}
+
+function showTestimonial(index) {
+    const testimonials = document.querySelectorAll('.testimonial-card');
+    const dots = document.querySelectorAll('.carousel-dots .dot');
+    
+    if (testimonials.length === 0) return;
+
+    // Hide all testimonials
+    testimonials.forEach(testimonial => {
+        testimonial.classList.remove('active');
+    });
+
+    // Remove active class from all dots
+    dots.forEach(dot => {
+        dot.classList.remove('active');
+    });
+
+    // Show current testimonial
+    if (testimonials[index]) {
+        testimonials[index].classList.add('active');
+    }
+
+    // Activate current dot
+    if (dots[index]) {
+        dots[index].classList.add('active');
+    }
+
+    currentTestimonialIndex = index;
+}
+
+function changeTestimonial(direction) {
+    const testimonials = document.querySelectorAll('.testimonial-card');
+    if (testimonials.length === 0) return;
+
+    currentTestimonialIndex += direction;
+
+    if (currentTestimonialIndex >= testimonials.length) {
+        currentTestimonialIndex = 0;
+    } else if (currentTestimonialIndex < 0) {
+        currentTestimonialIndex = testimonials.length - 1;
+    }
+
+    showTestimonial(currentTestimonialIndex);
+    
+    // Restart auto-rotation
+    stopTestimonialAutoRotation();
+    startTestimonialAutoRotation();
+}
+
+function currentTestimonial(index) {
+    showTestimonial(index - 1); // Convert to 0-based index
+    
+    // Restart auto-rotation
+    stopTestimonialAutoRotation();
+    startTestimonialAutoRotation();
+}
+
+function startTestimonialAutoRotation() {
+    stopTestimonialAutoRotation(); // Clear any existing interval
+    testimonialInterval = setInterval(() => {
+        changeTestimonial(1);
+    }, 5000); // Change every 5 seconds
+}
+
+function stopTestimonialAutoRotation() {
+    if (testimonialInterval) {
+        clearInterval(testimonialInterval);
+        testimonialInterval = null;
+    }
+}

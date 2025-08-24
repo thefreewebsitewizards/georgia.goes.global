@@ -99,7 +99,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-sparkles"></i>
+                        <i class="fas fa-palette"></i>
                     </div>
                     <h3>Beauty & Fashion</h3>
                     <p>Capture the essence of beauty and style with content that resonates with your target audience and showcases products authentically.</p>
@@ -486,38 +486,53 @@
         </div>
     </section>
 
-    <!-- Testimonials Section - Updated with real reviews -->
+    <!-- Testimonials Section - Updated with carousel -->
     <section id="testimonials" class="testimonials">
         <div class="container">
             <h2 class="section-title">From People I've Worked With</h2>
             <p class="testimonials-subtitle">Real feedback from brands, stays, and people I've worked with — because results matter, but relationships matter more.</p>
-            <div class="testimonials-container">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"I'm writing you to express my thank you to you for your video from your TikTok (the ones has 27K Views). The Video is very helpful to us that many people come by your recommendation. It is our pleasure to working with you (you are so nicely and friendly). Wish you all the best and hope to seeing you at our place at the soonest time."</p>
-                        <div class="testimonial-author">
-                            <strong>— Nhu Tran</strong>
-                            <span>Owner of Oat Nails and Spa Hoi An, Vietnam</span>
+            <div class="testimonials-carousel">
+                <div class="testimonials-container">
+                    <div class="testimonial-card active">
+                        <div class="testimonial-content">
+                            <p>"I'm writing you to express my thank you to you for your video from your TikTok (the ones has 27K Views). The Video is very helpful to us that many people come by your recommendation. It is our pleasure to working with you (you are so nicely and friendly). Wish you all the best and hope to seeing you at our place at the soonest time."</p>
+                            <div class="testimonial-author">
+                                <strong>— Nhu Tran</strong>
+                                <span>Owner of Oat Nails and Spa Hoi An, Vietnam</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"We are writing to say our thank you very much for your support video about Zen House on TikTok and Instagram. It is very helpful to us, many people asking for the place and accommodation. We also have more direct booking from your video. Once again, wishing you all the best and hope to have chance to collab with you in the future."</p>
+                            <div class="testimonial-author">
+                                <strong>— Nhu Tran</strong>
+                                <span>General Manager of Zen House Hoi An</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"I had the pleasure of meeting and working with Georgia during her time in Vietnam. From the very first interaction, I was impressed by her kindness, professionalism, and creativity. She has a natural ability to connect with people and bring out authentic stories through her content. What stood out to me most was her eye for detail and her passion for creating meaningful work. She approaches everything with positivity and genuine care, which makes the collaboration experience so enjoyable."</p>
+                            <div class="testimonial-author">
+                                <strong>— Quynh Nhu Nguyen</strong>
+                                <span>Founder – Mina Lash & Brow, Hoi An</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"We are writing to say our thank you very much for your support video about Zen House on TikTok and Instagram. It is very helpful to us, many people asking for the place and accommodation. We also have more direct booking from your video. Once again, wishing you all the best and hope to have chance to collab with you in the future."</p>
-                        <div class="testimonial-author">
-                            <strong>— Nhu Tran</strong>
-                            <span>General Manager of Zen House Hoi An</span>
-                        </div>
-                    </div>
+                <div class="carousel-nav">
+                    <button class="carousel-btn prev-btn" onclick="changeTestimonial(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next-btn" onclick="changeTestimonial(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"I had the pleasure of meeting and working with Georgia during her time in Vietnam. From the very first interaction, I was impressed by her kindness, professionalism, and creativity. She has a natural ability to connect with people and bring out authentic stories through her content. What stood out to me most was her eye for detail and her passion for creating meaningful work. She approaches everything with positivity and genuine care, which makes the collaboration experience so enjoyable."</p>
-                        <div class="testimonial-author">
-                            <strong>— Quynh Nhu Nguyen</strong>
-                            <span>Founder – Mina Lash & Brow, Hoi An</span>
-                        </div>
-                    </div>
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="currentTestimonial(1)"></span>
+                    <span class="dot" onclick="currentTestimonial(2)"></span>
+                    <span class="dot" onclick="currentTestimonial(3)"></span>
                 </div>
             </div>
         </div>
